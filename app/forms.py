@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Neighbourhood, Posts, Comment, Business, UserProfile
 
+
 class HoodForm(forms.ModelForm):
     class Meta: 
         model = Neighbourhood
