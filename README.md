@@ -17,6 +17,18 @@ As a user of the application, you are able to:
 - Users can also search for images based categories
 - Admin can upload images from a django dashboard
 
+### Behaviors
+
+<ol>
+    <li>The project has an admin dashboard, where I as the administrator manages all models.</li>
+    <li>The User can join a neighbourhood by clicking the button "Join" on the homepage</li>
+    <li>Once a user signs in, their profile is created automatically, and they can navigate to their profile by clicking on their profile name link on the navbar.</li>
+    <li>The User can search for hoods they are interested in by typing the name of the hood location on the 'hood search bar' on the navbar. Once they join a hood,they can also search for a business in the respective neighbourhood by typing the name of the business in the 'hood business bar' on the navbar</li>
+    <li>The User can create a Post in the neighbourhood and edit their post.</li>
+    <li>The User can create a Business in the neighbourhood and edit their business.</li>
+    <li>The User Profile is updated once the user joins a neighbourhood.</li>
+</ol>
+
 
 
 ## Technologies Used
