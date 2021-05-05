@@ -29,6 +29,7 @@ class Neighbourhood(models.Model):
         hoods = cls.objects.filter(hood_location__icontains = search_term)
         return hoods
 
+    
     def __str__(self):
         return self.hood_name
 
