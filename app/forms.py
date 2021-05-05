@@ -13,6 +13,7 @@ class HoodPostForm(forms.ModelForm):
         model = Posts
         fields = ['title', 'body']
 
+        
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
