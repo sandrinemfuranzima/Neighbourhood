@@ -32,6 +32,7 @@ class Neighbourhood(models.Model):
     def __str__(self):
         return self.hood_name
 
+    
 class Business(models.Model):
     biz_name = models.CharField(max_length=50)
     biz_email = models.EmailField()
