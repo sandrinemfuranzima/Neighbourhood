@@ -32,7 +32,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # development
 if config('MODE')=="dev":
 
- ALLOWED_HOSTS= []
+ ALLOWED_HOSTS= ['']
  
 
 
