@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+
+
+{%block content%}
+<div class="container-fluid">
+
+
+
+		{% if user.join %}
+		<div class="jumbotron text-center" style="font-size:20px; background-color:ghostwhite;height:50px;padding:0px;color:black">	
+				<a href="{%url 'profile' %}" style="margin-right:10px;">Profile |</a>
+				<a href="{% url 'createBusiness' %}" style="margin-right:10px;">Create Business |</a>
+				<a href="{% url 'business' %}" style="margin-right:10px;">My Businesses |</a>
+				<a href="{% url 'allPosts' %}" style="margin-right:10px;">My Posts |</a>
+				<a href="{% url 'hoodPost' %}" style="margin-right:10px;">Create Post |</a>
+				<a href="{% url 'createHood' %}" style="margin-right:10px;">Create Neighbourhoods |</a>
+		</div>
+		{% endif %}
+
+<div class="row">
+	<div class="col-md-2"></div>
+	{% if allPosts %}
+	<div class="col-md-8" style=" box-sizing:border-box;border:solid black;border-radius: 5%;font-size:18px;margin-top: 5px;
+    background-color: gainsboro;color:black;padding-top: 5px;padding-bottom: 10px;">	
+	{%for post in allPosts%}		
+						<p>
+						<span  style="font-weight:bolder;">Title :</span><a href="{% url 'singlePost' post.id %}">{{post.title}} </a>
+						</p>
+						<p>{{post.body}}</p>	
+						<p><span style="font-weight:bolder;">Posted by :</span> {{post.user}}</p>
+						<a class="btn btn-primary" href="{% url 'singlePost' post.id %}" style="font-size:18px;">Comment</a>	
+					
+							
+			<hr>
+	{%endfor%}		
+	</div>
+	
+	{%else%}
+	<h4>You havent created any forum posts yet. You can create one <a href="{% url 'hoodPost' %}">here</a> </h4>
+	{%endif%}
+	<div class="col-md-2"></div>
+			
+		
+	</div>
+
+</div>
+{%endblock%}

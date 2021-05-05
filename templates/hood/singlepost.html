@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{%load bootstrap3%}
+{%block content%}
+<div class="container-fluid" style="background-color: rgb(30, 60, 97);">
+		{% if user.join %}
+		<div class="jumbotron text-center" style="font-size:20px; background-color:ghostwhite;height:50px;padding:0px;color:black">	
+				<a href="{%url 'profile' %}" style="margin-right:10px;">Profile |</a>
+				<a href="{% url 'createBusiness' %}" style="margin-right:10px;">Create Business |</a>
+				<a href="{% url 'business' %}" style="margin-right:10px;">My Businesses |</a>
+				<a href="{% url 'allPosts' %}" style="margin-right:10px;">My Posts |</a>
+				<a href="{% url 'hoodPost' %}" style="margin-right:10px;">Create Post |</a>
+				<a href="{% url 'createHood' %}" style="margin-right:10px;">Create Neighbourhoods |</a>
+		</div>
+		{% endif %}
+		
+		<div class="row" style="padding-bottom:20px">
+				<div class="col-md-3"></div>
+					<div class="col-md-7" style="font-size:20px;">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="">Title: {{post.title}}</h3>
+							</div>
+							<div class="panel-body">
+								{{post.body}}<br>
+								
+							</div>
+						</div>
+						<div class="panel panel-default" >
+							<div class="panel-body">
+								<form action = "{% url 'singlePost' post.id %}" method = "post">
+									{%csrf_token%}
+									{% bootstrap_form form %}
+									<button type="submit" class="btn btn-primary" style="font-size:18px;">Comment</button>
+									
+								</form>
+								{% for comment in comments %}
+								<div class="row" style="margin-top:10px;">
+									<p><span style="font-weight:bolder; font-size:18px">{{comment.user}} :</span> {{comment.comment}}</p>
+								</div>
+								{%endfor%}
+								<br>
+								<a href="{% url 'deletePost' post.id %}" class="btn btn-danger" style="font-size:18px;">Delete Post</a>
+							</div>
+						</div>
+					
+						
+					
+					</div>
+					<div class="col-md-2">
+						
+					</div>
+				
+		</div>
+		
+
+</div>
+
+
+{%endblock%}

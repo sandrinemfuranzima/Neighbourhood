@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%block content%}
+
+
+
+ 
+<div class="container-fluid" style="color: lavender;">
+	
+		
+
+	<h1 class="text-center">Create a Neighbourhood <a href="{% url 'createHood' %}">HERE</a></h1>
+		
+	<div class="row" style="padding-top: 20px">
+
+		
+		<h1 class="text-center" style="color: lavender;">OUR HOODS</h1>
+		{%for hood in hoods%}
+		<div class="col-md-4" id="hoods">
+					<h3><span style="font-weight: bolder">Location:</span> {{hood.hood_location}}</h3>
+                    <p><span style="font-weight: bolder">Name:</span> {{hood.hood_name}}</p>
+                    <p><span style="font-weight: bolder">Description:</span> {{hood.hood_description}}</p>
+					<a href="{% url 'joinHood' hood.id %}" class="btn btn-sm btn-primary text-center" style="font-size:18px;">Join Hood</a>
+		</div>
+		{%endfor%}
+		
+				
+	
+</div>
+</div>
+
+
+{%endblock%}

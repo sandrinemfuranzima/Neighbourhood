@@ -1,0 +1,50 @@
+#hoods {
+    box-sizing:border-box;
+    border:solid black;
+    margin-left: 3px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    background-color: gainsboro;
+    color:black;
+    font-size:18px;
+}
+
+body {
+    font-family: 'Segoe UI';
+}
+
+#posts {
+    box-sizing:border-box;
+    border:solid black;
+    border-radius: 5%;
+    font-size:18px;
+    margin-top: 5px;
+    background-color: gainsboro;
+    color:black;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#business{
+    box-sizing: border-box;
+    border:solid black;
+    border-radius: 10%;
+    font-size:18px;
+    margin-top: 5px;
+    background-color: gainsboro;
+    color:black;
+    padding-top: 5px;
+}
+
+#singlepost {
+    box-sizing:border-box;
+    border:solid black;
+    border-radius: 5%;
+    font-size:18px;
+    margin-top: 5px;
+    background-color: gainsboro;
+    color:black;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
