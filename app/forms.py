@@ -9,6 +9,7 @@ class HoodForm(forms.ModelForm):
         model = Neighbourhood
         fields = ['hood_name','hood_description', 'hood_location', 'hood_count']
 
+        
 class HoodPostForm(forms.ModelForm):
     class Meta:
         model = Posts
