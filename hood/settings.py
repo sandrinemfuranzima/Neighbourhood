@@ -32,6 +32,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 if config('MODE')=="dev":
 
  ALLOWED_HOSTS= []
+ 
 
 
 # Application definition
