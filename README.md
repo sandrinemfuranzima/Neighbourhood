@@ -10,6 +10,7 @@ As a user of the application, you are able to:
     <li>Only view details of a single neighborhood.</li>
 <ul>
 
+
 ## Features
 - The home page allows users to see various images:
 - User can see all images per location they were taken
