@@ -26,7 +26,6 @@ As a user of the application, you are able to:
     - JavaScript
     - Postgressql
 
-
 ### Prerequisite
 The Sunsplash project requires a prerequisite understanding of the following:
 - Django Framework
