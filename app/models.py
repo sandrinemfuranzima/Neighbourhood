@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+
 # Create your models here.
 class Neighbourhood(models.Model):
     HOODS = (
@@ -29,9 +30,11 @@ class Neighbourhood(models.Model):
         hoods = cls.objects.filter(hood_location__icontains = search_term)
         return hoods
 
+    
     def __str__(self):
         return self.hood_name
 
+    
 class Business(models.Model):
     biz_name = models.CharField(max_length=50)
     biz_email = models.EmailField()
